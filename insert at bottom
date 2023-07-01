@@ -9,13 +9,7 @@ void solve (stack<int>&s,int target){
   s.pop();
   solve(s,target);
   s.push(topelement);
-}
-void insertatbottom(stack<int>&s){
-  
-  int target=s.top();
-  s.pop();
-  solve(s,target);
-}
+}  
 int main() {
  stack<int>s;
     s.push(10);
@@ -23,7 +17,9 @@ int main() {
     s.push(30); 
     s.push(40);
     s.push(50);
- insertatbottom(s);
+int target=s.top();
+  s.pop();
+  solve(s,target);
   while(!s.empty()){
     cout<<s.top()<<" ";
     s.pop();
